@@ -154,6 +154,26 @@ Each entry records:
 
 ---
 
+### About `common.h` and the `so_utils` library
+
+The `common.h` file contains all the definitions shared between the Client and Server modules, including:
+
+- Data structures: `Viatura`, `Estacionamento`, and `LogItem`  
+- Project constants: `MAX_ESPERA`, `FILE_REQUESTS`, `FILE_LOGFILE`, `DISPONIVEL`, `INVALID`  
+- Function prototypes for Server, Dedicated Server, and Client modules  
+- Common includes for signals, processes, time, and file handling
+
+`common.h` acts as **the contract between the client and server**, ensuring that both use the same structures, functions, and constants.
+
+#### Attention to the `so_utils.h` path
+
+Currently, `common.h` references the `so_utils.h` library via an **absolute path**:
+
+```c
+#include "/home/so/utils/include/so_utils.h"
+
+---
+
 # Technologies Used
 
 * **C programming language**
