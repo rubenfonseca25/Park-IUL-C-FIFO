@@ -154,7 +154,7 @@ Each entry records:
 
 ---
 
-### About `common.h` and the `so_utils` library
+## About `common.h` and the `so_utils` library
 
 The `common.h` file contains all the definitions shared between the Client and Server modules, including:
 
@@ -170,7 +170,7 @@ The `common.h` file contains all the definitions shared between the Client and S
 Currently, `common.h` references the `so_utils.h` library via an **absolute path**:
 
 ```c
-#include "/home/so/utils/include/so_utils.h"
+> #include "/home/so/utils/include/so_utils.h"
 
 ---
 
